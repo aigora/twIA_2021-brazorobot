@@ -4,11 +4,15 @@ Nuestra idea de proyecto es crear un brazo robotico capaz de ser controlado por 
 
 ## Integrantes del equipo
 
-1. David Pinto Llorente-davidpintollorente
-2. Javier Lerin Alonso-JavierLerinAlonso
-3. Tobias Francisco kosanich-tobiaskos
-4. Alvaro Lopez Villarroel-AlvaroLVillarroel
-5. Euchan kang-dinner123
+1.David Pinto Llorente-davidpintollorente 
+
+2.Javier Lerin Alonso-JavierLerinAlonso
+
+3.Tobias Francisco kosanich-tobiaskos
+
+4.Alvaro Lopez Villarroel-AlvaroLVillarroel
+
+5.Euchan kang-dinner123
 
 ## Objetivos del trabajo
 
