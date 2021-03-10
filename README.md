@@ -1,4 +1,4 @@
-# [Título del trabajo]
+# Brazo Robotico controlado por un guante
 
 [Descripción breve del proyecto a realizar (2-3 frases).]
 
