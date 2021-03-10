@@ -1,6 +1,6 @@
 # Brazo Robotico controlado por guante
 
-[Descripción breve del proyecto a realizar (2-3 frases).]
+Nuestra idea de proyecto es crear un brazo robotico capaz de ser controlado por un guante, este sera controlado con nuestros dedos. Este proyecto sera progamado con c++ y con arduino. 
 
 ## Integrantes del equipo
 
