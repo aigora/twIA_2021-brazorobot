@@ -1,4 +1,4 @@
-# Brazo Robotico controlado por un guante
+# Brazo Robotico controlado por guante
 
 [Descripción breve del proyecto a realizar (2-3 frases).]
 
