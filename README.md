@@ -20,10 +20,15 @@ Nuestra idea de proyecto es crear un brazo robotico capaz de ser controlado por 
 2. Crear el brazo y guante con arduino con el uso de sensores como el giroscopio.  
 ## Movimiento del brazo
 1.pinzas
+
 2.muñeca
+
 3.codo
+
 4.hombro
+
 5.base
+
 Cada una de estas partes seran controladas con el uso de un guante que controlaremos manualmente con nuestra mano.
 Dependiendo la extremidad que movamos de la mano, se interactuara con las distintas partes de nuestro brazo robotico.
 
