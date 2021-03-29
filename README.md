@@ -4,20 +4,21 @@ Nuestra idea de proyecto es crear un brazo robotico capaz de ser controlado por 
 
 ## Integrantes del equipo
 
-1.David Pinto Llorente-davidpintollorente 
+1. David Pinto Llorente-davidpintollorente 
 
-2.Javier Lerin Alonso-JavierLerinAlonso
+2. Javier Lerin Alonso-JavierLerinAlonso
 
-3.Tobias Francisco kosanich-tobiaskos
+3. Tobias Francisco kosanich-tobiaskos
 
-4.Alvaro Lopez Villarroel-AlvaroLVillarroel
+4. Alvaro Lopez Villarroel-AlvaroLVillarroel
 
-5.Euchan kang-dinner123
+5. Euchan kang-dinner123
 
 ## Objetivos del trabajo
 
-1. Desarollar un progama funcional(en C) para poder utilizar el guante como controlador del brazo
-2. Crear el brazo y guante con arduino con el uso de sensores como el giroscopio.  
+1. Diseño y desarrollo de un guante electrónico, capaz de dirigir las funciones de un brazo robótico.
+2. Desarrollar y programar un progama funcional (en C) que permita utilizar dicho guante como un controlador del brazo.
+3. Aplicar el uso de sensonres y hardwares que faciliten al mecanismo y funcionamiento del guante, a través de programas como Arduino.   
 ## Movimiento del brazo
 1. pinzas
 2. muñeca
