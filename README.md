@@ -22,7 +22,7 @@ Nuestra idea de proyecto es crear un brazo robotico capaz de ser controlado por 
 ## Movimiento del brazo
 1. pinzas
 
-La pinza es controlada con los botones localizados en el dedo medio y menique. La pinza se cierra apretando el indice con el dedo medio. Para abrir la pinza apretamos el dedo medio medio con el menique
+La pinza es controlada con los botones localizados en el dedo medio y menique. La pinza se cierra apretando el indice con el dedo medio. Para abrir la pinza apretamos el dedo medio medio con el menique.
 2. muñeca
 
 La muñeca es controlada con una resistencia flexible en el dedo indice. Doblar este dedo hastsa la mitad provocara que la muñeca del robot baje, doblarlo del todo hara que este  suba.
