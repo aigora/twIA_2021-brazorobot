@@ -19,7 +19,13 @@ Nuestra idea de proyecto es crear un brazo robotico capaz de ser controlado por 
 1. Diseño y desarrollo de un guante electrónico, capaz de dirigir las funciones de un brazo robótico.
 2. Desarrollar y programar un progama funcional (en C) que permita utilizar dicho guante como un controlador del brazo.
 3. Aplicar el uso de sensonres y hardwares que faciliten al mecanismo y funcionamiento del guante, a través de programas como Arduino.   
+
+## Objetivos
+
+El brazo robotico controlado por un guante, se inspira en los brazos automatizados utilizados en las industrias. Nuestro objetivo con este proyecto es crear un brazo que sea capaz de responder a los movimientos de nuestra mano. Para ello, diseñaremos nosotros mismos un guante que se adapte a nuestra mano. Este guante estara construido por distintos hardwares, como cables, sensores... El software que vamos a utilizar es C++ y Arduino. El guante estará conectado al brazo robotico via bluetooth, lo que será mas facil para el usuario. El brazo se movera de forma que al realizar un movimiento vertical, horizontal... con nuestros dedos, las articulaciones del brazo tambien se muevan respecto al movimiento realizado por el usuario. Para finalizar someteremos a nuestro brazo robótico a una prueba. Esta prueba consistirá en saber si nuestro brazo es capaz o no, de mover y coger objetos de forma eficiente.
+
 ## Movimiento del brazo
+
 1. pinzas:
 La pinza es controlada con los botones localizados en el dedo medio y menique. La pinza se cierra apretando el indice con el dedo medio. Para abrir la pinza apretamos el dedo medio medio con el menique.
 2. muñeca:
