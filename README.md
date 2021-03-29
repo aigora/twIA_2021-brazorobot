@@ -21,10 +21,15 @@ Nuestra idea de proyecto es crear un brazo robotico capaz de ser controlado por 
 3. Aplicar el uso de sensonres y hardwares que faciliten al mecanismo y funcionamiento del guante, a través de programas como Arduino.   
 ## Movimiento del brazo
 1. pinzas
+La pinza es controlada con los botones localizados en el dedo medio y menique. La pinza se cierra apretando el indice con el dedo medio. Para abrir la pinza apretamos el dedo medio medio con el menique
 2. muñeca
+La muñeca es controlada con una resistencia flexible en el dedo indice. Doblar este dedo hastsa la mitad provocara que la muñeca del robot baje, doblarlo del todo hara que este  suba.
 3. codo
+El codo es controlado con un acelemometro. Girar la palma hacia arriba o hacia abajo mueve el codo del robot en la direccion respectiva.
 4. hombro
+Controlado por un acelemometro girar la palma hacia la derecha o hacia la izquierda mueve el hombro en la diceccion respectiva. 
 5. base
+Tambien controlado por un acelemometro muy parecido al hombro o el codo. Girar la palma hacia la derecha o izquierda mientras la palma se mantiene en hacia arriba mueva la base del robot hacia la derecha o hacia la izquierda. 
 
 Cada una de estas partes seran controladas con el uso de un guante que controlaremos manualmente con nuestra mano.
 Dependiendo la extremidad que movamos de la mano, se interactuara con las distintas partes de nuestro brazo robotico.
