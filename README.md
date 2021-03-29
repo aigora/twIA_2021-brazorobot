@@ -40,9 +40,15 @@ Cada una de estas partes seran controladas con el uso de un guante que controlar
 Dependiendo la extremidad que movamos de la mano, se interactuara con las distintas partes de nuestro brazo robotico.
 
 ## Identificador de sensores y actuadores
+
 ACTUADORES
+
 El actuador del que vamos a hacer uso para que el brazo robot se mueva es el servomotor. El servo es un accionador muy común que permite el desplazamiento en un rango de movimiento de 180 grados. La ventaja del servo reside en esta característica pues se le indica directamente el ángulo deseado. Internamente el servo suele contar con un mecanismo reductor que proporciona un alto par y una gran precision. Sin embargo; la velocidad de actuación o de giro son pequeñas. Los servos admiten una tensión de entre 4,8 y 7,2 voltios, aunque lo ideal son 6 voltios. Con ellos podremos controlar la posición.
+
 SENSORES
+
 Por otro lado, usaremos acelerómetros, dispositivos que miden la aceleración (la variacion de la velodidad respecto del tiempo). Los acelerómetros cuentan con una masa suspendida en su interior mediante muelles. De esta forma, al aplicar un movimiento, la masa se mueve y provoca la elongación y la contracción de los muelles. El desplazamiento de la masa interna permite determinar la aceleración. Los acelerómetros son capaces de medir en los tres ejes (x, y, z).
+
 Emplearemos botones o pulsadores, sensores de lo más simple pues solo tienen dos estados. Estos detectan si están siendo pulsados (se ejerce presión soble ellos) o si no lo están, de manera que el programa pueda actuar en consecuencia. 
+
 Por último, una resistencia flexible. Este sensor, aumenta su resistencia al ser flexionado. Cuando se dobla el sustrato del sensor produce una salida de resistencia en relación con el radio de curvatura. El sensor flex, con una flexión de 0° dará la resistencia de 10K y con una flexión de 90° dará entre 30 a 40 K ohmios.
