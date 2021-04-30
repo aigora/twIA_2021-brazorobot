@@ -4,7 +4,7 @@
 
 ## 3.CAJA DE CONTROL
 
-||CONEXION ENTRE LOS MODULOS DE CONEXION INALAMBRICA(nRF24L01)||
+||CONEXION ENTRE LOS MODULOS DE CONEXION INALAMBRICA(nRF24L01) - Conexión por radiofrecuencia ||
   El modulo nRF24L01 es un dispositivo que funciona a 3.3V, su principal funcion es enviar señales (desde la placa NANO) de 2 bytes de datos, 10 veces por segundo, señales que
   serán recividas por un segundo dispositivo de conexión. Dicho dispositivo se encargara de analizar los datos de la señal y procesar la información a la placa (Placa MEGA).
   Para hacer posible el movimiento de los motores necesitaremos un total de 10 bits (2 por cada motor de OWI). Para hacer posible este movimmiente utilizaremos como codigos
