@@ -5,7 +5,7 @@
      ,ejecutadas mediante movimientos, a la caja de control y al brazo robot.
      Esta caja de transmisión esta compuesta principalmente por:
       •	Un Elegoo Nano, que cumple la función de un Arduino Nano. 
-      •	Un módulo inalámbrico Nrf24 que une la caja de control del brazo con la muñequera y el guante.
+      •	Un módulo inalámbrico Nrf24 que une la caja de control del brazo robot con la muñequera y el guante.
       •	Un cable plano de 10 que conecta la caja de transmisión con el guante.
       •	Una serie de resistencias.
       •	Un condensador de 47 uF y 50v.
