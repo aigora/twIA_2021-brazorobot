@@ -1,7 +1,6 @@
 # DISEÑO DEL SISTEMA
 ## 1.GUANTE
   El brazo robot KSR10 tiene 6 elementos que pueden ser controlados:
-  
      1.	 Una base.
      2.	 Un codo, que uno el brazo robot a la base.
      3.	 Un hombro, que es la parte del brazo conectada a la muñeca.
