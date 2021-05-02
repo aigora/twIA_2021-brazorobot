@@ -30,11 +30,11 @@ La pinza es controlada con una resistencia flexible en el dedo índice. Si dobla
 2. Muñeca:
 La muñeca es controlada con una resistencia flexible en el dedo corazón. Doblar este dedo hasta la mitad provocará que la muñeca del robot baje, doblarlo del todo hará que este  suba.
 3. Codo:
-El codo es controlado con un acelerómetro. Girar la palma hacia arriba o hacia abajo mueve el codo del robot en la dirección respectiva.
+El codo es controlado con un acelerómetro. Girar el dorso de la mano hacia arriba o hacia abajo mueve el codo del robot en la dirección respectiva.
 4. Hombro:
-Controlado por un acelerómetro girar la palma hacia la derecha o hacia la izquierda mueve el hombro en la dicección respectiva. 
+Controlado por un acelerómetro girar el dorso de la mano hacia la derecha o hacia la izquierda mueve el hombro en la dicección respectiva. 
 5. Base:
-También controlado por un acelerómetro muy parecido al hombro o el codo. Girar la palma hacia la derecha o izquierda mientras la palma se mantiene en hacia arriba mueva la base del robot hacia la derecha o hacia la izquierda. 
+También controlado por un acelerómetro muy parecido al hombro o el codo. Girar el dorso de la mano hacia la derecha o izquierda mientras la palma se mantiene en hacia arriba mueva la base del robot hacia la derecha o hacia la izquierda. 
 
 Cada una de estas partes serán controladas con el uso de un guante que controlaremos manualmente con nuestra mano.
 Dependiendo de la extremidad que movamos de la mano, se interactuará con las distintas partes de nuestro brazo robótico.
