@@ -1,25 +1,31 @@
 # DISEÑO DEL SISTEMA
 ## 1.GUANTE
   El brazo robot KSR10 tiene 6 elementos que pueden ser controlados:
+  
      1.	 Una base.
      2.	 Un codo, que uno el brazo robot a la base.
      3.	 Un hombro, que es la parte del brazo conectada a la muñeca.
      4.	 Una muñeca.
      5.	 Unas pinzas.
      6.	 Un led blanco , que está en medio de las pinzas.
+  
   El guante esta diseñado para controlar el led y los motores del brazo robot (en total 5 motores). 
   Cada una estas partes tienen unos sensores específicos los cuales son:
+  
      •	 Una resistencia flexible localizada en dedo corazón. Esta se encarga de controlar la muñeca. Si doblamos hasta la mitad, 
          la muñeca del robot bajara. Cuando se dobla por completo el dedo la muñeca sube.
      •	 Otra resistencia flexible localizada en dedo índice. 
          Si se el dedo dobla hasta la mitad  las pinzas de brazo robot se  van cerrando pero si se dobla del todo hará que las pinzas se abran.
      •	 Un módulo Acelerómetro+Giroscopio que controla 3 partes:
+     
         1. La Base: Girando el dorso de la mano hacia la derecha o izquierda mientras la palma se mantiene en hacia arriba mueva la base del robot hacia la derecha o hacia la izquierda.
         2. El Codo: Si giramos el dorso de la mano hacia arriba o hacia abajo mueve el codo del robot en la dirección respectiva.
         3. El Hombro: Al girar el dorso de la mano hacia la derecha o hacia la izquierda mueve el hombro en esas direcciones.
+     
      •	 Un botón que hará que el led blanco de las pinzas se encienda o se apague.
   Al guante estarían unidos los sensores (el botón, el módulo y las resistencias flexibles) y sus correspondientes cables a una parte llamada como “Caja de conexión”
   Esta caja de conexión serviría como nexo entre el guante y la muñequera mediante un cable. Estaría compuesta por:
+  
      •	 Unos leds de colores que uno indicaría si este encendido y otro se encendería si se esta transmitiendo los datos a la caja de control.
      •	 Una pequeña placa baquelita.
      •	 3 resistencias y un conector.
@@ -28,6 +34,7 @@
   En la muñequera se encuentra la caja de transmisión encargada enviar y de transcribir las órdenes del guante
   ,ejecutadas mediante movimientos, a la caja de control y al brazo robot.
   Esta caja de transmisión esta compuesta principalmente por:
+  
       •	 Un Elegoo Nano, que cumple la función de un Arduino Nano. 
       •	 Un módulo inalámbrico nRF24 que une la caja de control del brazo robot con la muñequera y el guante.
       •	 Un cable plano de 10 que conecta la caja de transmisión con el guante.
@@ -35,23 +42,27 @@
       •	 Un condensador de 47 uF y 50v.
       •	 Una caja para una de pila de 9v con interruptor.
       •	 Una  pila de 9v.
+      
   Todo este hardware se encuentra conectado a una protoboard. 
   Cabe destacar que el módulo inalámbrico nRF24 está por encima del Nano.
   La electrónica está sobre la caja de la pila y todo esta unido a una muñequera.
      
 ## 3.CAJA DE CONTROL
+
   La caja de control es uno delos dispositivo mas complejo del sistema, pues se encarga de recibir la información de los gestos del guante atraves de un modulo nRF24L01.
   Su interior consta principalmente de una placa MEGA, donde se conectaran todas las conexiones pin del robor OWI. La placa se encontrará conectada a una bateria que 
   suministrar una tensión de 9V. Para hacer posible el movimiento de los motores (5 motores), utilizaremos unos chips controladores (L293D). Dado que cada controlador acepta 
   dos motores, con 3 será suficiente. Para simplificar el diseño del sistema utilizaremos un conector flexible de 14 pins que contenga las distintas conexiones pin de OWI.
   
 || CONTROLADOR L293D ||
+
   El controlador L293D es un circuito integrado constituido por 4 partes de puente-H. Esto permite controla 4 motores-dc de forma unidireccional o 2 motores-dc en ambas
   direcciones, como es nuestro caso. El controlador consta de un total de 16 pines, 8 por cada columna, numerados de arriba a abajo. Dado que cada L293D puede controlar
   dos motres, estos se conectarán en el pin 3 y 6 (Motor 1) y el pin 11 y 14 (Motor 2). Uno de los pricipales puntos a favor de este controlador es que permite una alimentación
   independiente para los motores, se pueden controlar desde los 4.5 Vdc hasta 36 Vdc.
   
 || CONEXION ENTRE LOS MODULOS DE CONEXION INALAMBRICA(nRF24L01) - Conexión por radiofrecuencia ||
+
   El modulo nRF24L01 es un dispositivo que funciona a 3.3V, su principal funcion es enviar señales (desde la placa NANO) de 2 bytes de datos, 10 veces por segundo, señales que
   serán recibidas por un segundo dispositivo de conexión. Dicho dispositivo se encargara de analizar los datos de la señal y procesar la información a la placa (Placa MEGA).
   Para hacer posible el movimiento de los motores necesitaremos un total de 10 bits (2 por cada motor de OWI). Para hacer posible este movimmiente utilizaremos como codigos
