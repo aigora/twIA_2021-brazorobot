@@ -21,7 +21,7 @@
      2. El Codo: Si giramos el dorso de la mano hacia arriba o hacia abajo mueve el codo del robot en la dirección respectiva.
      3. El Hombro: Al girar el dorso de la mano hacia la derecha o hacia la izquierda mueve el hombro en esas direcciones.
      
-  •	 Un botón que hará que el led blanco de las pinzas se encienda o se apague.
+  *	 Un botón que hará que el led blanco de las pinzas se encienda o se apague.
   Al guante estarían unidos los sensores (el botón, el módulo y las resistencias flexibles) y sus correspondientes cables a una parte llamada como “Caja de conexión”
   Esta caja de conexión serviría como nexo entre el guante y la muñequera mediante un cable. Estaría compuesta por:
   * Unos leds de colores que uno indicaría si este encendido y otro se encendería si se esta transmitiendo los datos a la caja de control.
