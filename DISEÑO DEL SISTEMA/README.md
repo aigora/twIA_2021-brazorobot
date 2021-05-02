@@ -32,18 +32,19 @@
 ## 2.MUÑEQUERA
   En la muñequera se encuentra la caja de transmisión encargada enviar y de transcribir las órdenes del guante
   ,ejecutadas mediante movimientos, a la caja de control y al brazo robot.
-  Esta caja de transmisión esta compuesta principalmente por:                                                                                                                    
+  Esta caja de transmisión esta compuesta principalmente por:
   *	 Un Elegoo Nano, que cumple la función de un Arduino Nano. 
   *	 Un módulo inalámbrico nRF24 que une la caja de control del brazo robot con la muñequera y el guante.
   *	 Un cable plano de 10 que conecta la caja de transmisión con el guante.
   *	 Una serie de resistencias.
   *	 Un condensador de 47 uF y 50v.
   *	 Una caja para una de pila de 9v con interruptor.
-  *	 Una  pila de 9v.                                                                                                                                                            
- Todo este hardware se encuentra conectado a una protoboard. 
- Cabe destacar que el módulo inalámbrico nRF24 está por encima del Nano.
- La electrónica está sobre la caja de la pila y todo esta unido a una muñequera.
-     
+  *	 Una  pila de 9v. 
+  Todo este hardware se encuentra conectado a una protoboard. 
+  Cabe destacar que el módulo inalámbrico nRF24 está por encima del Nano.
+  La electrónica está sobre la caja de la pila y todo esta unido a una muñequera.     
+                                                                                                                                                            
+ 
 ## 3.CAJA DE CONTROL
 
   La caja de control es uno delos dispositivo mas complejo del sistema, pues se encarga de recibir la información de los gestos del guante atraves de un modulo nRF24L01.
