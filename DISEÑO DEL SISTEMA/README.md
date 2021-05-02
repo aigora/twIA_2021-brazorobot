@@ -11,12 +11,12 @@
   
   El guante esta diseñado para controlar el led y los motores del brazo robot (en total 5 motores). 
   Cada una estas partes tienen unos sensores específicos los cuales son:
-  
-  •	 Una resistencia flexible localizada en dedo corazón. Esta se encarga de controlar la muñeca. Si doblamos hasta la mitad, 
+
+  *	 Una resistencia flexible localizada en dedo corazón. Esta se encarga de controlar la muñeca. Si doblamos hasta la mitad, 
          la muñeca del robot bajara. Cuando se dobla por completo el dedo la muñeca sube.
-  •	 Otra resistencia flexible localizada en dedo índice. 
+  *	 Otra resistencia flexible localizada en dedo índice. 
          Si se el dedo dobla hasta la mitad  las pinzas de brazo robot se  van cerrando pero si se dobla del todo hará que las pinzas se abran.
-  •	 Un módulo Acelerómetro+Giroscopio que controla 3 partes:
+  *	 Un módulo Acelerómetro+Giroscopio que controla 3 partes:
      1. La Base: Girando el dorso de la mano hacia la derecha o izquierda mientras la palma se mantiene en hacia arriba mueva la base del robot hacia la derecha o hacia la izquierda.
      2. El Codo: Si giramos el dorso de la mano hacia arriba o hacia abajo mueve el codo del robot en la dirección respectiva.
      3. El Hombro: Al girar el dorso de la mano hacia la derecha o hacia la izquierda mueve el hombro en esas direcciones.
@@ -31,14 +31,14 @@
 ## 2.MUÑEQUERA
   En la muñequera se encuentra la caja de transmisión encargada enviar y de transcribir las órdenes del guante
   ,ejecutadas mediante movimientos, a la caja de control y al brazo robot.
-  Esta caja de transmisión esta compuesta principalmente por:                                                                                                                       
-  •	 Un Elegoo Nano, que cumple la función de un Arduino Nano. 
-  •	 Un módulo inalámbrico nRF24 que une la caja de control del brazo robot con la muñequera y el guante.
-  •	 Un cable plano de 10 que conecta la caja de transmisión con el guante.
-  •	 Una serie de resistencias.
-  •	 Un condensador de 47 uF y 50v.
-  •	 Una caja para una de pila de 9v con interruptor.
-  •	 Una  pila de 9v.                                                                                                                                                                              
+  Esta caja de transmisión esta compuesta principalmente por:                                                                                                                    
+  *	 Un Elegoo Nano, que cumple la función de un Arduino Nano. 
+  *	 Un módulo inalámbrico nRF24 que une la caja de control del brazo robot con la muñequera y el guante.
+  *	 Un cable plano de 10 que conecta la caja de transmisión con el guante.
+  *	 Una serie de resistencias.
+  *	 Un condensador de 47 uF y 50v.
+  *	 Una caja para una de pila de 9v con interruptor.
+  *	 Una  pila de 9v.                                                                                                                                                                              
   Todo este hardware se encuentra conectado a una protoboard. 
   Cabe destacar que el módulo inalámbrico nRF24 está por encima del Nano.
   La electrónica está sobre la caja de la pila y todo esta unido a una muñequera.
