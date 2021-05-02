@@ -26,9 +26,9 @@ El brazo robótico controlado por un guante, se inspira en los brazos automatiza
 
 ## Movimiento del brazo
 1. Pinzas:
-La pinza es controlada con los botones localizados en el dedo medio y meñique. La pinza se cierra apretando el índice con el dedo medio. Para abrir la pinza apretamos el dedo medio con el meñique.
+La pinza es controlada con una resistencia flexible en el dedo índice. Si doblamos este dedo hasta la mitad provocaremos que las pinzas de brazo robot vayan cerrandose pero si se dobla del todo hará que las pinzas de abran.
 2. Muñeca:
-La muñeca es controlada con una resistencia flexible en el dedo índice. Doblar este dedo hasta la mitad provocará que la muñeca del robot baje, doblarlo del todo hará que este  suba.
+La muñeca es controlada con una resistencia flexible en el dedo corazón. Doblar este dedo hasta la mitad provocará que la muñeca del robot baje, doblarlo del todo hará que este  suba.
 3. Codo:
 El codo es controlado con un acelerómetro. Girar la palma hacia arriba o hacia abajo mueve el codo del robot en la dirección respectiva.
 4. Hombro:
