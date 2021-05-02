@@ -39,10 +39,10 @@
   *	 Una serie de resistencias.
   *	 Un condensador de 47 uF y 50v.
   *	 Una caja para una de pila de 9v con interruptor.
-  *	 Una  pila de 9v.                                                                                                                                                                              
-  Todo este hardware se encuentra conectado a una protoboard. 
-  Cabe destacar que el módulo inalámbrico nRF24 está por encima del Nano.
-  La electrónica está sobre la caja de la pila y todo esta unido a una muñequera.
+  *	 Una  pila de 9v.                                                                                                                                                            
+ Todo este hardware se encuentra conectado a una protoboard. 
+ Cabe destacar que el módulo inalámbrico nRF24 está por encima del Nano.
+ La electrónica está sobre la caja de la pila y todo esta unido a una muñequera.
      
 ## 3.CAJA DE CONTROL
 
