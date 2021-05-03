@@ -80,17 +80,17 @@
  caja de control (que se encarga de que el brazo ejecute las ordenes). La segunda es monitorizar las acciones que se están llevando a cabo y que el usuario pueda ver en pantalla
  los movimientos del brazo robótico. 
  
- Al inicializar el sistema, la aplicación pedirá al usuario que se coloque el guante y que comprueve que el resto de sistemas están encendidos y preparados para su uso. Tras 
+ Al inicializar el sistema, la aplicación pedirá al usuario que se coloque el guante y que compruebe que el resto de sistemas están encendidos y preparados para su uso. Tras 
  haberlo hecho el usuario deberá pulsar la tecla espaciadora para que la muñequera comience a enviar los datos recogidos por los sensores del guante (resistencias flexibles, 
- módulo acelerómetro-giroscopio y botón) al PC mediante el módulo de conexión inalambrica nRF24L01. Sin embargo; dicha acción no será posible hasta que todos los sistemas esten
+ módulo acelerómetro-giroscopio y botón) al PC mediante el módulo de conexión inalambrica nRF24L01. Sin embargo; dicha acción no será posible hasta que todos los sistemas estén
  operativos, por lo que el ordenador continuará pidiendo al usuario que compruebe que los sistemas están listos y que pulse la tecla espaciadora. Al mismo tiempo, mostrará un 
- mensaje advirtiendo al usuario de que alguno de los no está listo.
+ mensaje advirtiendo al usuario de que alguno de los sistemas no está listo.
  
  En el momento que el ordenador comience a recibir las ordenes proporcionadas por el guante, este las analizará y enviará por medio de otro módulo nRF24L01 situado en la caja de
  control, los movimientos que debe ejecutar el brazo robótico. A su vez, el usuario situado frente a la pantalla y con el guante podrá observar como van apareciendo las acciones
  llevadas a cabo por el brazo (cerrar o abrir la pinza, subir o bajar la muñeca, ...). Esto se debe a que en ocasiones, es posible que el usuario no esté en presencia del brazo
  y no pueda controlar visualmente los movimientos, por lo que dicha funcionalidad le permitirá hacerlo sin problemas. 
  
- De esta forma, por ejemplo, si el usuario dobla completamente su dedo índice flexionará una resistencia flexible, la caja de conexión lo detectará y se lo comunicará a la 
+ De esta forma, por ejemplo, si el usuario dobla completamente su dedo índice, flexionará una resistencia flexible, la caja de conexión lo detectará y se lo comunicará a la 
  muñequera por medio de cableado. La muñequera se lo comunicará al ordenador mediante el módulo nRF24L01. El ordenador se lo comunicará a la caja de control por medio otro
  módulo nRF24L01. La caja de control se lo comunicará al brazo mediante cableado y se abrirá por completo la pinza. En la pantalla se mostrará: "Se ha abierto la pinza".
