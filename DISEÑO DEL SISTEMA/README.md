@@ -2,12 +2,12 @@
 ## 1.GUANTE
   El brazo robot KSR10 tiene 6 elementos que pueden ser controlados: 
  
- 1.	 Una base.
- 3.	 Un codo, que uno el brazo robot a la base.
- 4.	 Un hombro, que es la parte del brazo conectada a la muñeca.
- 5.	 Una muñeca.
- 6.	 Unas pinzas.
- 7.	 Un led blanco , que está en medio de las pinzas.
+ 1.	 Una **base**.
+ 2.	 Un **codo**, que uno el brazo robot a la base.
+ 3.	 Un **hombro**, que es la parte del brazo conectada a la muñeca.
+ 4.	 Una **muñeca**.
+ 5.	 Unas **pinzas**.
+ 6.	 Un **led blanco** , que está en medio de las pinzas.
   
   El guante esta diseñado para controlar el led y los motores del brazo robot (en total 5 motores). 
   Cada una estas partes tienen unos sensores específicos los cuales son:
@@ -17,9 +17,9 @@
   *	 Otra resistencia flexible localizada en dedo índice. 
          Si se el dedo dobla hasta la mitad  las pinzas de brazo robot se  van cerrando pero si se dobla del todo hará que las pinzas se abran.
   *	 Un módulo Acelerómetro+Giroscopio que controla 3 partes:
-     1. La Base: Girando el dorso de la mano hacia la derecha o izquierda mientras la palma se mantiene en hacia arriba mueva la base del robot hacia la derecha o hacia la izquierda.
-     2. El Codo: Si giramos el dorso de la mano hacia arriba o hacia abajo mueve el codo del robot en la dirección respectiva.
-     3. El Hombro: Al girar el dorso de la mano hacia la derecha o hacia la izquierda mueve el hombro en esas direcciones.
+     1. **La Base**: Girando el dorso de la mano hacia la derecha o izquierda mientras la palma se mantiene en hacia arriba mueva la base del robot hacia la derecha o hacia la izquierda.
+     2. **El Codo**: Si giramos el dorso de la mano hacia arriba o hacia abajo mueve el codo del robot en la dirección respectiva.
+     3. **El Hombro**: Al girar el dorso de la mano hacia la derecha o hacia la izquierda mueve el hombro en esas direcciones.
      
   *	 Un botón que hará que el led blanco de las pinzas se encienda o se apague.
   
