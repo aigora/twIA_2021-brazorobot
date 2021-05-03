@@ -50,9 +50,9 @@
 ## 3.CAJA DE CONTROL
 
   La caja de control es uno de los dispositivos más complejos del sistema, pues se encarga de recibir la información de los gestos del guante a través de un módulo nRF24L01.
-  Su interior consta principalmente de una placa MEGA, donde se conectarán todas las conexiones pin del robor OWI. La placa se encontrará conectada a una bateria que 
+  Su interior consta principalmente de una placa MEGA, donde se conectarán todas las conexiones pin del robor KSR10. La placa se encontrará conectada a una bateria que 
   suministrará una tensión de 9V. Para hacer posible el movimiento de los motores (5 motores), utilizaremos unos chips controladores (L293D). Dado que cada controlador acepta 
-  dos motores, con 3 será suficiente. Para simplificar el diseño del sistema utilizaremos un conector flexible de 14 pins que contenga las distintas conexiones pin de OWI.
+  dos motores, con 3 será suficiente. Para simplificar el diseño del sistema utilizaremos un conector flexible de 14 pins que contenga las distintas conexiones pin de KSR10.
   
 || CONTROLADOR L293D ||
 
@@ -65,7 +65,7 @@
 
   El módulo nRF24L01 es un dispositivo que funciona a 3.3V, su principal función es enviar señales (desde la placa NANO) de 2 bytes de datos, 10 veces por segundo, señales que
   serán recibidas por un segundo dispositivo de conexión. Dicho dispositivo se encargará de analizar los datos de la señal y procesar la información a la placa (Placa MEGA).
-  Para hacer posible el movimiento de los motores necesitaremos un total de 10 bits (2 por cada motor de OWI). Para hacer posible este movimiento utilizaremos como códigos
+  Para hacer posible el movimiento de los motores necesitaremos un total de 10 bits (2 por cada motor de KSR10). Para hacer posible este movimiento utilizaremos como códigos
   de dirección: 
   
   01 (Para que el motor gire a la derecha) y 10 (Para que el motor gire a la izquierda)
