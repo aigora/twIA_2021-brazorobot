@@ -76,9 +76,9 @@
 
 
 ## 4.APLICACION PC
- La aplicación que se ejecuta en el PC tiene dos funciones. La primera es ser el nexo que permita la comunicación entre la muñequera (que recibe las ordenes del guante) y la
- caja de control (que se encarga de que el brazo ejecute las ordenes). La segunda es monitorizar las acciones que se están llevando a cabo y que el usuario pueda ver en pantalla
- los movimientos del brazo robótico. 
+ La aplicación que se ejecuta en el PC tiene dos funciones: 
+ 1º. Ser el nexo de union entre la muñequera (que recibe las ordenes del guante) y la caja de control (que se encarga de que el brazo ejecute las ordenes) permitiendo  asi  la comunicación . 
+ 2º. Monitorizar las acciones que se están llevando a cabo y que el usuario pueda ver en pantalla los movimientos del brazo robótico. 
  
  Al inicializar el sistema, la aplicación pedirá al usuario que se coloque el guante y que compruebe que el resto de sistemas están encendidos y preparados para su uso. Tras 
  haberlo hecho el usuario deberá pulsar la tecla espaciadora para que la muñequera comience a enviar los datos recogidos por los sensores del guante (resistencias flexibles, 
