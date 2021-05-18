@@ -45,6 +45,9 @@ void loop() {
     //Envia 10
     radio.write("10",sizeof("10"));
     delay(1000);
+  }else{
+    radio.write("00",sizeof("00"));
+    delay(1000);
   }
 
 //Si el sensor 2 sencuentra entre 70 y 110 grados
@@ -58,5 +61,9 @@ void loop() {
     //Envia 20
     radio.write("20",sizeof("20"));
     delay(1000);
+  }else{
+    radio.write("00",sizeof("00"));
+    delay(1000);
   }
+  
 }
