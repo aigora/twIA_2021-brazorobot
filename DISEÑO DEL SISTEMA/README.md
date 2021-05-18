@@ -77,19 +77,20 @@
 
 ## 4.APLICACION PC
  La aplicación que se ejecuta en el PC tiene dos funciones: 
- 1. Ser el nexo de union entre la muñequera (que recibe las ordenes del guante) y la caja de control (que se encarga de que el brazo ejecute las ordenes) permitiendo  asi  la comunicación . 
+ 1. Ser el nexo de unión entre la muñequera (que recibe las ordenes del guante) y la caja de control (que se encarga de que el brazo ejecute las ordenes) permitiendo  así  la comunicación . 
  2. Monitorizar las acciones que se están llevando a cabo y que el usuario pueda ver en pantalla los movimientos del brazo robótico. 
  
  Al inicializar el sistema, la aplicación pedirá al usuario que se coloque el guante y que compruebe que el resto de sistemas están encendidos y preparados para su uso. 
  Tras hacerlo , el usuario deberá pulsar la tecla espaciadora para que la muñequera comience a enviar los datos recogidos por los sensores del guante (resistencias flexibles, 
- módulo acelerómetro-giroscopio y botón) al PC mediante el módulo de conexión inalambrica nRF24L01. 
- Esta acción no será posible hasta que todos los sistemas estén operativos, por lo que el ordenador continuará pidiendo al usuario que compruebe que los sistemas están listos y que presione la tecla espaciadora. Al mismo tiempo, mostrará un mensaje advirtiendo al usuario de que alguno de los sistemas no está listo.
+ módulo acelerómetro-giroscopio y botón) al PC mediante el módulo de conexión inalámbrica nRF24L01. 
+ Esta acción no será posible hasta que todos los sistemas estén operativos, por lo que el ordenador continuará pidiendo al usuario que compruebe que los sistemas están listos y que se presione la tecla espaciadora. Al mismo tiempo, mostrará un mensaje advirtiendo al usuario de que alguno de los sistemas no está listo.
  
- En el momento que el ordenador comience a recibir las ordenes del guante, este las analizará y enviará por medio del otro módulo nRF24L01 situado en la caja de
- control, los movimientos que debe ejecutar el brazo robótico. 
+ En el momento que el ordenador comience a recibir las ordenes del guante, este las analizará y enviará los movimientos que debe ejecutar el brazo robótico por medio del otro módulo nRF24L01 situado en la caja de control. 
  A su vez, el usuario situado frente a la pantalla y con el guante podrá observar como van apareciendo las acciones llevadas a cabo por el brazo (cerrar o abrir la pinza, subir o bajar la muñeca, ...). 
- Ya que en ocasiones,  el usuario no estara en cerca del brazo y no podra controlar visualmente los movimientos, por lo que dicha funcionalidad le permitirá hacerlo sin problemas. 
+ Ya que en ocasiones,  el usuario no estará cerca del brazo y no podrá controlar visualmente los movimientos, por lo que dicha funcionalidad le permitirá hacerlo sin problemas.
  
- De esta forma, por ejemplo, si el usuario dobla completamente su dedo índice, flexionará una **resistencia flexible**, **la caja de conexión del guante** lo detectará y enviara la informacion a **la muñequera** por medio de cableado. 
- La **muñequera** con el módulo nRF24L01 transmitirá estos datos al ordenador . El ordenador interpreta los datos mediante y manda una orden a la **caja de control** por medio del otro módulo nRF24L01. 
- La **caja de control** comanda la orden al brazo mediante cableado y se abrirá por completo la pinza.  Mientras tanto en la pantalla se mostrará: "Se ha abierto la pinza".
+ Adicionalmente, cada uno de los movimientos realizados por el brazo quedarán guardados en un fichero.txt, de forma que el usuario pueda consultar posteriormente la secuencia de ordenes llevada a cabo.
+ 
+ De esta forma, por ejemplo, si el usuario dobla completamente su dedo índice, flexionará una **resistencia flexible**, **la caja de conexión del guante** lo detectará y enviará la información a **la muñequera** por medio de cableado. 
+ La **muñequera** con el módulo nRF24L01 transmitirá estos datos al ordenador . El ordenador interpreta los datos y manda una orden a la **caja de control** por medio del otro módulo nRF24L01 presente en dicha caja. 
+ La **caja de control** manda la orden al brazo mediante cableado y se abrirá por completo la pinza.  Mientras tanto en la pantalla se mostrará: "Se ha abierto la pinza". Este mismo texto quedará guardado en el fichero.
