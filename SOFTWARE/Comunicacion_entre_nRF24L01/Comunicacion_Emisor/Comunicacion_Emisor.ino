@@ -1,8 +1,10 @@
 #include <SPI.h>
 #include <RF24.h>
 
-RF24 radio(7,8); //Conexiones pin CNS, CE
-const byte acceso[] = "10000"; //Pin de acceso
+RF24 radio(9,10); //Conexiones pin CE|CSN
+const uint64_t acceso = 0xE8E8F0F0E1LL; //Codigo de acceso
+
+int dato;
 
 void setup() {
   //Inicia la señal
@@ -16,9 +18,9 @@ void setup() {
 }
 
 void loop() {
-  Serial.begin(9600);
-  const char texto[]= "Conectado";
-  //Envia el siguiente texto
-  radio.write(&texto, sizeof(texto));
+  //Asigna un valo a dato
+  dato = 01;
+  //Envia los siguientes digitos
+  radio.write(dato, sizeof dato);
   delay(1000);
 }
