@@ -47,7 +47,7 @@ El actuador del que vamos a hacer uso para que el brazo robot se mueva es el ser
 
 SENSORES
 
-Por otro lado, usaremos acelerómetros, dispositivos que miden la aceleración (la variación de la velocidad respecto del tiempo). Los acelerómetros cuentan con una masa suspendida en su interior mediante muelles. De esta forma, al aplicar un movimiento, la masa se mueve y provoca la elongación y la contracción de los muelles. El desplazamiento de la masa interna permite determinar la aceleración. Los acelerómetros son capaces de medir en los tres ejes (x, y, z).
+Por otro lado, usaremos acelerómetros, que son dispositivos que miden la aceleración (la variación de la velocidad respecto del tiempo). Los acelerómetros cuentan con una masa suspendida en su interior mediante muelles. De esta forma, al aplicar un movimiento, la masa se mueve y provoca la elongación y la contracción de los muelles. El desplazamiento de la masa interna permite determinar la aceleración. Los acelerómetros son capaces de medir en los tres ejes (x, y, z).
 
 Emplearemos botones o pulsadores, sensores de lo más simple pues solo tienen dos estados. Estos detectan si están siendo pulsados (se ejerce presión sobre ellos) o si no lo están, de manera que el programa pueda actuar en consecuencia. 
 
