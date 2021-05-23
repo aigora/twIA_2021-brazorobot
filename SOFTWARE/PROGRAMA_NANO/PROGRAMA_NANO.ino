@@ -7,8 +7,11 @@ int Estadoflexible = 0;
 const int Sflexible2 = A4; 
 int Estadoflexible2 = 0;
 
-RF24 radio(7,8); //Conexiones pin CNS, CE
-const byte acceso[] = "10000"; //Pin de acceso
+RF24 radio(9,10); //Conexiones pin CE|CSN
+const uint64_t acceso = 0xE8E8F0F0E1LL; //Codigo de acceso
+
+int dato;
+int dato2;
 
 void setup() {
   //Inicia el monitor en serie
@@ -36,33 +39,39 @@ void loop() {
 
   //Si el sensor sencuentra entre 70 y 110 grados
   if (Estadoflexible >= 70 && Estadoflexible <= 110){
+    dato = 01;
     //Envia 01
-    radio.write("01",sizeof("01"));
+    radio.write(dato,sizeof dato);
     delay(1000);
   }
    //Si el sensor sencuentra entre 160 y 180 grados
   else if (Estadoflexible >= 160 && Estadoflexible <= 180){
+     dato = 10;
     //Envia 10
-    radio.write("10",sizeof("10"));
+    radio.write(dato,sizeof dato);
     delay(1000);
   }else{
-    radio.write("00",sizeof("00"));
+    dato = 00;
+    radio.write(dato,sizeof dato);
     delay(1000);
   }
 
 //Si el sensor 2 sencuentra entre 70 y 110 grados
   if (Estadoflexible2 >= 70 && Estadoflexible2 <= 110){
+    dato2 = 02;
     //Envia 02
-    radio.write("02",sizeof("02"));
+    radio.write(dato2,sizeof dato2);
     delay(1000);
   }
    //Si el sensor 2 sencuentra entre 160 y 180 grados
   else if (Estadoflexible2 >= 160 && Estadoflexible2 <= 180){
+    dato2 = 20;
     //Envia 20
-    radio.write("20",sizeof("20"));
+    radio.write(dato2,sizeof dato2);
     delay(1000);
   }else{
-    radio.write("00",sizeof("00"));
+    dato2 = 00;
+    radio.write(dato2,sizeof dato2);
     delay(1000);
   }
   
