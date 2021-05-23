@@ -11,7 +11,6 @@ RF24 radio(9,10); //Conexiones pin CE|CSN
 const uint64_t acceso = 0xE8E8F0F0E1LL; //Codigo de acceso
 
 int dato;
-int dato2;
 
 void setup() {
   //Inicia el monitor en serie
@@ -58,20 +57,20 @@ void loop() {
 
 //Si el sensor 2 sencuentra entre 70 y 110 grados
   if (Estadoflexible2 >= 70 && Estadoflexible2 <= 110){
-    dato2 = 02;
+    dato = 02;
     //Envia 02
-    radio.write(dato2,sizeof dato2);
+    radio.write(dato,sizeof dato);
     delay(1000);
   }
    //Si el sensor 2 sencuentra entre 160 y 180 grados
   else if (Estadoflexible2 >= 160 && Estadoflexible2 <= 180){
-    dato2 = 20;
+    dato = 20;
     //Envia 20
-    radio.write(dato2,sizeof dato2);
+    radio.write(dato,sizeof dato);
     delay(1000);
   }else{
-    dato2 = 00;
-    radio.write(dato2,sizeof dato2);
+    dato = 00;
+    radio.write(dato,sizeof dato);
     delay(1000);
   }
   
