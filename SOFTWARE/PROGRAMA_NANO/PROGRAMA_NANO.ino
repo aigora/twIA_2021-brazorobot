@@ -30,11 +30,11 @@ void loop() {
   
   Estadoflexible = analogRead(A5);
   //Ajusta el valor de el estado a sus grados(0-180)
-  Estadoflexible = map(Estadoflexible,624,229,0,180);
+  Estadoflexible = map(Estadoflexible,268,110,0,180);
 
    Estadoflexible2 = analogRead(A4);
   //Ajusta el valor de el estado a sus grados(0-180)
-  Estadoflexible2 = map(Estadoflexible2,624,229,0,180);
+  Estadoflexible2 = map(Estadoflexible2,268,110,0,180);
 
   //Si el sensor sencuentra entre 70 y 110 grados
   if (Estadoflexible >= 70 && Estadoflexible <= 110){
