@@ -9,24 +9,27 @@
 #define MAX_BUFFER 200
 
 void Inicializacion(Serial* Arduino);
-void Configuracion_Fichero(void);
+FILE* Configuracion_Fichero(FILE*);
 void Receive_Data(Serial* Arduino);
+int Receive_from_hw(Serial* Arduino, char* BufferEntrada);
+void Process_Data(int);
+//void Movimientos();
 
 int main() {
+	FILE* pf;
 
 	Serial* Arduino;
 	char puerto[] = "COM3"; //Puerto serie al que está conectado Arduino
-	char BufferEntrada[MAX_BUFFER];
 	
 	Arduino = new Serial((char*)puerto);  // Establece la conexión con Arduino
 
 	Inicializacion(Arduino);
-	Configuracion_Fichero();
+	Configuracion_Fichero(pf);
 
 	while (Arduino->IsConnected()) {
 		Receive_Data(Arduino);
 	}
-	
+
     /*if (fclose(pf) == NULL)
         printf("\n Archivo cerrado correctamente");
     else
@@ -53,15 +56,14 @@ void Inicializacion(Serial* Arduino) {
 		}
 
 	} while (espacio != ' ');
-
+	
 	return;
 }
 
-void Configuracion_Fichero(void) {
+FILE* Configuracion_Fichero(FILE* pf) {
 	int opc;
 	char fecha[F];
-	FILE* pf;
-
+	
 	printf("\n\n\nLos movimientos realizados por el brazo robot quedaran guardados en un fichero.txt.");
 	printf("\nSeleccione el nombre del fichero de entre los propuestos.");
 	printf("\n1:Mov_Brazo\n2:BrazoRobot\n3:Historial_movimientos");
@@ -79,7 +81,7 @@ void Configuracion_Fichero(void) {
 			printf("\nTeclee la fecha para que conste en el fichero (dd/mm/aa): ");
 			gets_s(fecha);
 			fprintf(pf, "%s \n", fecha);
-			return;
+			return pf;
 		}
 		else {
 			printf("\n\nEl archivo NO esta abierto\n");
@@ -93,7 +95,7 @@ void Configuracion_Fichero(void) {
 			printf("\nTeclee la fecha para que conste en el fichero (dd/mm/aa): ");
 			gets_s(fecha);
 			fprintf(pf, "%s \n", fecha);
-			return;
+			return pf;
 		}
 		else {
 			printf("\n\nEl archivo NO esta abierto\n");
@@ -107,7 +109,7 @@ void Configuracion_Fichero(void) {
 			printf("\nTeclee la fecha para que conste en el fichero (dd/mm/aa): ");
 			gets_s(fecha);
 			fprintf(pf, "%s \n", fecha);
-			return;
+			return pf;
 		}
 		else {
 			printf("\n\nEl archivo NO esta abierto\n");
@@ -122,5 +124,35 @@ void Configuracion_Fichero(void) {
 }
 
 void Receive_Data(Serial* Arduino) {
+	char BufferEntrada[MAX_BUFFER];
+	int numero_recibido;
 
+	if (Arduino->IsConnected()) {
+		numero_recibido = Receive_from_hw(Arduino, BufferEntrada);;
+		Process_Data(numero_recibido);
+	}
+	return;
+}
+
+int Receive_from_hw(Serial* Arduino, char* BufferEntrada) {
+	int bytesRecibidos, bytesTotales = 0;
+	int intentos_lectura = 0;
+	char cadena[MAX_BUFFER];
+
+	BufferEntrada[0] = '\0';
+	cadena[0] = '\0';
+	bytesRecibidos = Arduino->ReadData(cadena, sizeof(char) * (MAX_BUFFER - 1));
+	if (bytesRecibidos != -1) {
+		cadena[bytesRecibidos] = '\0';
+		strcat_s(BufferEntrada, MAX_BUFFER, cadena);
+		bytesTotales += bytesRecibidos;
+	}
+
+	return bytesTotales;
+}
+
+void Process_Data(int numero_recibido) {
+
+
+	return;
 }
