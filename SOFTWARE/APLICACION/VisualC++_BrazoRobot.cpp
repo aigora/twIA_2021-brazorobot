@@ -9,11 +9,11 @@
 #define MAX_BUFFER 200
 
 void Inicializacion(Serial* Arduino);
-FILE* Configuracion_Fichero(FILE*);
-void Receive_Data(Serial* Arduino);
+FILE* Configuracion_Fichero(void);
+void Receive_Data(Serial* Arduino, FILE*);
 int Receive_from_hw(Serial* Arduino, char* BufferEntrada);
-void Process_Data(int);
-//void Movimientos();
+void Process_Data(int, FILE*);
+void Cierre_Fichero(FILE*);
 
 int main() {
 	FILE* pf;
@@ -24,17 +24,13 @@ int main() {
 	Arduino = new Serial((char*)puerto);  // Establece la conexión con Arduino
 
 	Inicializacion(Arduino);
-	Configuracion_Fichero(pf);
+	pf = Configuracion_Fichero();
 
 	while (Arduino->IsConnected()) {
-		Receive_Data(Arduino);
+		Receive_Data(Arduino, pf);
 	}
 
-    /*if (fclose(pf) == NULL)
-        printf("\n Archivo cerrado correctamente");
-    else
-        printf("\n Error en el cierre del archivo");
-		*/
+	Cierre_Fichero(pf);
 
 }
 
@@ -60,7 +56,8 @@ void Inicializacion(Serial* Arduino) {
 	return;
 }
 
-FILE* Configuracion_Fichero(FILE* pf) {
+FILE* Configuracion_Fichero() {
+	FILE* pf;
 	int opc;
 	char fecha[F];
 	
@@ -123,13 +120,13 @@ FILE* Configuracion_Fichero(FILE* pf) {
 
 }
 
-void Receive_Data(Serial* Arduino) {
+void Receive_Data(Serial* Arduino, FILE* pf) {
 	char BufferEntrada[MAX_BUFFER];
 	int numero_recibido;
 
 	if (Arduino->IsConnected()) {
 		numero_recibido = Receive_from_hw(Arduino, BufferEntrada);;
-		Process_Data(numero_recibido);
+		Process_Data(numero_recibido, pf);
 	}
 	return;
 }
@@ -151,8 +148,46 @@ int Receive_from_hw(Serial* Arduino, char* BufferEntrada) {
 	return bytesTotales;
 }
 
-void Process_Data(int numero_recibido) {
+void Process_Data(int numero_recibido, FILE* pf) {
 
+	if ((numero_recibido > 210) && (numero_recibido < 240)) {
+		printf("\n Se ha movido hacia arriba la muñeca");
+		fprintf(pf, "\n Se ha movido hacia arriba la muñeca");
+	}
+	else if ((numero_recibido > 160) && (numero_recibido < 190)) {
+		printf("\n Se ha movido hacia abajo la muñeca");
+		fprintf(pf, "\n Se ha movido hacia abajo la muñeca");
+	}
+	else if ((numero_recibido > 190) && (numero_recibido < 220)) {
+		printf("\n Se han abierto las pinzas");
+		fprintf(pf, "\n Se han abierto las pinzas");
+	}
+	else if ((numero_recibido > 220) && (numero_recibido < 260)) {
+		printf("\n Se han cerrado las pinzas");
+		fprintf(pf, "\n Se han cerrado las pinzas");
+	}
+	else if (numero_recibido > 35) {
+		printf("\n Se ha movido hacia arriba el codo");
+		printf("\n Se ha movido hacia arriba el hombro");
+		fprintf(pf, "\n Se ha movido hacia arriba el codo");
+		fprintf(pf, "\n Se ha movido hacia arriba el hombro");
+	}
+	else if (numero_recibido < -35) {
+		printf("\n Se ha movido hacia abajo el codo");
+		printf("\n Se ha movido hacia abajo el hombro");
+		fprintf(pf, "\n Se ha movido hacia abajo el codo");
+		fprintf(pf, "\n Se ha movido hacia abajo el hombro");
+	}
+
+
+	return;
+}
+
+void Cierre_Fichero(FILE* pf) {
+	if (fclose(pf) == NULL)
+		printf("\n Archivo cerrado correctamente");
+	else
+		printf("\n Error en el cierre del archivo");
 
 	return;
 }
