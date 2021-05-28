@@ -1,4 +1,3 @@
-
 #include "I2Cdev.h"
 #include "MPU6050.h"
 #include "Wire.h"
@@ -21,7 +20,7 @@ void updateGiro()
 {
    dt = millis() - tiempo_prev;
    tiempo_prev = millis();
-   girosc_ang_x = (gx / 131)*dt / 1000.0 + girosc_ang_x_prev;
+   girosc_ang_x = (gx / 131)*dt / 1000.0 + girosc_ang_x_prev+0.015;
    girosc_ang_y = (gy / 131)*dt / 1000.0 + girosc_ang_y_prev;
    girosc_ang_z = (gy / 131)*dt / 1000.0 + girosc_ang_z_prev;
    girosc_ang_x_prev = girosc_ang_x;
@@ -53,7 +52,8 @@ int Estadoflexible = 0;
 //S.flexible 2
 const int Sflexible2 = A1;
 int Estadoflexible2 = 0;
-
+const int Sflexible3 = A2;
+int Estadoflexible3 = 0;
 void setup()
 {
   //Inicia el monitor serie
@@ -83,23 +83,16 @@ void loop()
   // Leer las velocidades angulares 
    mpu.getRotation(&gx, &gy, &gz);
    updateGiro();
-   
+
+ // Serial.println(Estadoflexible3);
+ //Serial.println(Estadoflexible2);
+  
    // Mostrar resultados
    Serial.print(F("\tRotacion en y: "));
-   Serial.println(girosc_ang_y);
+   Serial.print(girosc_ang_y);
    Serial.print(F("\tRotacion en x: "));
    Serial.println(girosc_ang_x);
-   Serial.print(F("\tRotacion en z: "));
-   Serial.println(girosc_ang_z);
-  
-  //Lee los estados
-  Estadoflexible2 = analogRead(A1);
-  //Ajusta el valor de el estado a sus grados(0-180)
-  Estadoflexible2 = map(Estadoflexible2,624,229,0,180);
-  
-  //Lee los estados
-  Estadoflexible = analogRead(A0);
-  
+   //Lee los estados
   //Instrucciones giroscopio
   if(girosc_ang_y > 35){
    digitalWrite(3, HIGH); 
@@ -126,39 +119,47 @@ void loop()
     digitalWrite(4, LOW); 
     digitalWrite(5, LOW);
     } 
-    
+      Estadoflexible2 = analogRead(A1);
+  //Ajusta el valor de el estado a sus grados(0-180)
+  Estadoflexible3 = analogRead(A2);
+  
+  //Lee los estados
+  Estadoflexible = analogRead(A0);
   //Instrucciones sensores flexibles
   if (Estadoflexible >= 160 && Estadoflexible <= 190){
     digitalWrite(8, HIGH); 
     digitalWrite(9, LOW);
     Serial.print("La muñeca esta bajando\n");
-    delay(1000);
-  }else if (Estadoflexible >= 210 && Estadoflexible <= 240){
+  }else if (Estadoflexible >= 210 && Estadoflexible <= 230){
     digitalWrite(9, HIGH); 
     digitalWrite(8, LOW);
     Serial.print("La muñeca esta subiendo\n");
-    delay(1000); 
   } else{
     digitalWrite(8, LOW); 
     digitalWrite(9, LOW);
-    delay(1000);
   }
-   delay (100);
-  
-   if (Estadoflexible2 >= 190 && Estadoflexible2 <= 220){
+   if (Estadoflexible2 >= 180 && Estadoflexible2 <= 200){
     digitalWrite(10, HIGH); 
     digitalWrite(11, LOW);
     Serial.print("Las pinzas se estan abriendo\n");
-    delay(1000);
-  }else if (Estadoflexible2 >= 221 && Estadoflexible2 <= 260){
+  }else if (Estadoflexible2 >= 150 && Estadoflexible2 <= 175){
     digitalWrite(11, HIGH); 
     digitalWrite(10, LOW);
     Serial.print("Las pinzas se estan cerrando\n");
-    delay(1000);
   } else{
     digitalWrite(10, LOW); 
     digitalWrite(11, LOW);
-    delay(1000);
   }
-  delay (100);
+  if (Estadoflexible3 >= 240 && Estadoflexible3 <= 255){
+    digitalWrite(6, HIGH); 
+    digitalWrite(7, LOW);
+    Serial.print("Las pinzas se estan abriendo\n");
+  }else if (Estadoflexible3 >= 205 && Estadoflexible3 <= 235){
+    digitalWrite(6, LOW); 
+    digitalWrite(7, HIGH);
+    Serial.print("Las pinzas se estan cerrando\n");
+  } else{
+    digitalWrite(6, LOW); 
+    digitalWrite(7, LOW);
+  }
 }
